@@ -6,14 +6,63 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		19C98ADF2F602B51003125B2 /* libEndpointSecurity.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C98ADE2F602B51003125B2 /* libEndpointSecurity.tbd */; };
+		19C98AE72F602B51003125B2 /* com.uney.shieldnetdefense.Extension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 19C98ADC2F602B51003125B2 /* com.uney.shieldnetdefense.Extension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19C98AE52F602B51003125B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19C98AC12F602A93003125B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19C98ADB2F602B51003125B2;
+			remoteInfo = Extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		19C98AEC2F602B51003125B2 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				19C98AE72F602B51003125B2 /* com.uney.shieldnetdefense.Extension.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		19C98AC92F602A93003125B2 /* MySecurityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySecurityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C98ADC2F602B51003125B2 /* com.uney.shieldnetdefense.Extension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = com.uney.shieldnetdefense.Extension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C98ADE2F602B51003125B2 /* libEndpointSecurity.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libEndpointSecurity.tbd; path = usr/lib/libEndpointSecurity.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		19C98AE82F602B51003125B2 /* Exceptions for "Extension" folder in "Extension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 19C98ADB2F602B51003125B2 /* Extension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		19C98ACB2F602A93003125B2 /* MySecurityApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MySecurityApp;
+			sourceTree = "<group>";
+		};
+		19C98AE02F602B51003125B2 /* Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				19C98AE82F602B51003125B2 /* Exceptions for "Extension" folder in "Extension" target */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +75,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19C98AD92F602B51003125B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C98ADF2F602B51003125B2 /* libEndpointSecurity.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				19C98ACB2F602A93003125B2 /* MySecurityApp */,
+				19C98AE02F602B51003125B2 /* Extension */,
+				19C98ADD2F602B51003125B2 /* Frameworks */,
 				19C98ACA2F602A93003125B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +100,17 @@
 			isa = PBXGroup;
 			children = (
 				19C98AC92F602A93003125B2 /* MySecurityApp.app */,
+				19C98ADC2F602B51003125B2 /* com.uney.shieldnetdefense.Extension.systemextension */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		19C98ADD2F602B51003125B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19C98ADE2F602B51003125B2 /* libEndpointSecurity.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +123,12 @@
 				19C98AC52F602A93003125B2 /* Sources */,
 				19C98AC62F602A93003125B2 /* Frameworks */,
 				19C98AC72F602A93003125B2 /* Resources */,
+				19C98AEC2F602B51003125B2 /* Embed System Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				19C98AE62F602B51003125B2 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				19C98ACB2F602A93003125B2 /* MySecurityApp */,
@@ -69,6 +139,28 @@
 			productName = MySecurityApp;
 			productReference = 19C98AC92F602A93003125B2 /* MySecurityApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		19C98ADB2F602B51003125B2 /* Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19C98AE92F602B51003125B2 /* Build configuration list for PBXNativeTarget "Extension" */;
+			buildPhases = (
+				19C98AD82F602B51003125B2 /* Sources */,
+				19C98AD92F602B51003125B2 /* Frameworks */,
+				19C98ADA2F602B51003125B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				19C98AE02F602B51003125B2 /* Extension */,
+			);
+			name = Extension;
+			packageProductDependencies = (
+			);
+			productName = Extension;
+			productReference = 19C98ADC2F602B51003125B2 /* com.uney.shieldnetdefense.Extension.systemextension */;
+			productType = "com.apple.product-type.system-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +173,9 @@
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					19C98AC82F602A93003125B2 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					19C98ADB2F602B51003125B2 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -100,12 +195,20 @@
 			projectRoot = "";
 			targets = (
 				19C98AC82F602A93003125B2 /* MySecurityApp */,
+				19C98ADB2F602B51003125B2 /* Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		19C98AC72F602A93003125B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19C98ADA2F602B51003125B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +225,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19C98AD82F602B51003125B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19C98AE62F602B51003125B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19C98ADB2F602B51003125B2 /* Extension */;
+			targetProxy = 19C98AE52F602B51003125B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		19C98AD32F602A95003125B2 /* Debug */ = {
@@ -252,15 +370,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NHV44H52VZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = space.tdog.MySecurityApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uney.shieldnetdefense;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -277,17 +397,73 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NHV44H52VZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = space.tdog.MySecurityApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uney.shieldnetdefense;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		19C98AEA2F602B51003125B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NHV44H52VZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Extension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSystemExtensionUsageDescription = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uney.shieldnetdefense.Extension;
+				PRODUCT_NAME = "$(inherited)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		19C98AEB2F602B51003125B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NHV44H52VZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Extension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSSystemExtensionUsageDescription = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uney.shieldnetdefense.Extension;
+				PRODUCT_NAME = "$(inherited)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -310,6 +486,15 @@
 			buildConfigurations = (
 				19C98AD62F602A95003125B2 /* Debug */,
 				19C98AD72F602A95003125B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19C98AE92F602B51003125B2 /* Build configuration list for PBXNativeTarget "Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19C98AEA2F602B51003125B2 /* Debug */,
+				19C98AEB2F602B51003125B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct MySecurityAppApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        // We use Settings instead of WindowGroup to prevent a blank window
+        // from popping up on launch.
+        Settings {
+            EmptyView()
         }
     }
 }
